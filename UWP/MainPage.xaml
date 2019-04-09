@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="SfDataGridDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SfDataGridDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Grid"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               AllowEditing="True"
+                               NavigationMode="Cell"
+                               SelectionMode="Single"
+                               AutoGenerateColumns="False"                           
+                               ItemsSource="{Binding OrderList}">
+            <syncfusion:SfDataGrid.Columns>
+                <local:GridDateTimeOffsetColumn Width="300"
+                                        HeaderText="Order Date" AllowInlineEditing="True" UseBindingValue="True" 
+                                        MappingName="OrderDate" />
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+    </Grid>
+</Page>
