@@ -2,9 +2,9 @@
 
 This repositories contains the samples to create custom column from existing columnm in [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) and [UWP DataGrid](https://www.syncfusion.com/uwp-ui-controls/datagrid) (SfDataGrid).
 
-You can create your own column by overriding the [predefined column types](https://help.syncfusion.com/wpf/datagrid/column-types#_Overriding_existing_cell) in DataGrid. For example, the **GridDateTimeColumn** loads the DateTime value by default. If you want to display `DateTimeOffset` value, you can create a new column by overriding the `GridDateTimeColumn` class.
+You can create your own column by overriding the [predefined column types](https://help.syncfusion.com/wpf/datagrid/column-types#_Overriding_existing_cell) in DataGrid. For example, the **GridDateTimeColumn** loads the **DateTime** value by default. If you want to display **DateTimeOffset** value, you can create a new column by overriding the **GridDateTimeColumn** class.
 
-In the below code snippet, converter created to format the `DateTimeOffSet` value to DateTime by defining `ValueBinding` (edit) and `DisplayBinding` (non-edit).
+In the below code snippet, converter created to format the **DateTimeOffSet** value to DateTime by defining **ValueBinding** (edit) and **DisplayBinding** (non-edit).
 
 ``` c#
 public class DateTimeOffsetFormatConverter : IValueConverter
@@ -101,7 +101,7 @@ public class DateTimeOffsetToDateTimeConverter : IValueConverter
 }
 ```
 
-In the below code snippet, `GridDateTimeOffsetColumn` column created from `GridDateTimeColumn`.
+In the below code snippet, **GridDateTimeOffsetColumn** column created from **GridDateTimeColumn**.
 
 ``` c#
 public class GridDateTimeOffsetColumn : GridDateTimeColumn
@@ -117,7 +117,7 @@ public class GridDateTimeOffsetColumn : GridDateTimeColumn
 }
 ```
 
-In the below code snippet, created `GridDateTimeOffsetColumn` added to `SfDataGrid.Columns` collection and specify the Pattern as FullDateTime. Since the ShortDate is the default pattern of `GridDateTimeColumn`.
+In the below code snippet, created **GridDateTimeOffsetColumn** added to [SfDataGrid.Columns](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_Columns) collection and specify the Pattern as FullDateTime. Since the **ShortDate** is the default pattern of **GridDateTimeColumn**.
 
 ### XAML
 
@@ -126,7 +126,7 @@ In the below code snippet, created `GridDateTimeOffsetColumn` added to `SfDataGr
                         AutoGenerateColumns="False" 
                         ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.Columns>
-        <local:GridDateTimeOffsetColumn MappingName="OrderDate" Pattern="FullDateTime"        UseBindingValue="True"/>
+        <local:GridDateTimeOffsetColumn MappingName="OrderDate" Pattern="FullDateTime"  UseBindingValue="True"/>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 ```
