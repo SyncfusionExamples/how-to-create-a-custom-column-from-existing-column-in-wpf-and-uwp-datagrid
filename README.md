@@ -1,8 +1,8 @@
-# How to create a custom column from existing column in wpf and uwp datagrid
+# How to Create a Custom Column from Existing Column in WPF / UWP DataGrid?
 
-This repositories contains the samples to create custom column from existing columnm in [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) and [UWP DataGrid](https://www.syncfusion.com/uwp-ui-controls/datagrid).
+This repositories contains the samples to create custom column from existing columnm in [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) and [UWP DataGrid](https://www.syncfusion.com/uwp-ui-controls/datagrid) (SfDataGrid).
 
-You can create your own column by overriding the [predefined column types](https://help.syncfusion.com/wpf/datagrid/column-types#_Overriding_existing_cell) in `SfDataGrid`. For example, the `GridDateTimeColumn` loads the DateTime value by default. If you want to display `DateTimeOffset` value, you can create a new column by overriding the `GridDateTimeColumn` class.
+You can create your own column by overriding the [predefined column types](https://help.syncfusion.com/wpf/datagrid/column-types#_Overriding_existing_cell) in DataGrid. For example, the **GridDateTimeColumn** loads the DateTime value by default. If you want to display `DateTimeOffset` value, you can create a new column by overriding the `GridDateTimeColumn` class.
 
 In the below code snippet, converter created to format the `DateTimeOffSet` value to DateTime by defining `ValueBinding` (edit) and `DisplayBinding` (non-edit).
 
